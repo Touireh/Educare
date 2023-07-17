@@ -1,0 +1,18 @@
+.study-calendar {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .study-calendar .fc-day-header {
+    font-size: 14px;
+  }
+  
+  .study-calendar .fc-daygrid-day {
+    min-height: 50px;
+  }
+  
+  .study-calendar .fc-event {
+    font-size: 14px;
+    padding: 5px;
+  }
+  

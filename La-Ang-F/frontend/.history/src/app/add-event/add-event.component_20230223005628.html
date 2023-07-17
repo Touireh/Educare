@@ -1,0 +1,23 @@
+<section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <form (submit)="addEvent()">
+            <div class="form-group">
+              <label for="eventTitle">Titre de l'événement</label>
+              <input type="text" class="form-control" id="eventTitle" [(ngModel)]="eventTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="eventDate">Date de l'événement</label>
+              <input type="date" class="form-control" id="eventDate" [(ngModel)]="eventDate" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+          </form>
+        </div>
+        <div class="col-md-8">
+          <full-calendar [options]="calendarOptions"></full-calendar>
+        </div>
+      </div>
+    </div>
+  </section>
+  

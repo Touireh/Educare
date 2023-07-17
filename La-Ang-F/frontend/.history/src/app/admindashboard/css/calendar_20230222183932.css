@@ -1,0 +1,7 @@
+.my-calendar {
+  margin: auto;
+  max-width: 80%;
+}
+.my-calendar .fc button {
+  background-color: green;
+}

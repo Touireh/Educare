@@ -1,0 +1,21 @@
+.my-calendar {
+  margin: auto;
+  max-width: 80%;
+}
+.my-calendar .fc button {
+  background-color: rgb(16, 16, 120);
+}
+.my-calendar .fc-today-button.fc-button-primary {
+  background-color: #fa6340;
+}
+.my-calendar .fc-event-title.fc-sticky {
+  white-space: normal;
+  height: auto;
+  text-align: center;
+}
+.fc-toolbar-title {
+  color: #fa6340;
+}
+.fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
+  background-color: #fa6340;
+}

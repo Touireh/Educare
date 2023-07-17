@@ -1,0 +1,127 @@
+<main>
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5" [routerLink]="['/landing']">
+        <img  src="./assets/img/brand/logo2.png">
+        <span  class="display-5  text-white"> EduCare</span>
+      </a>
+      <button class="navbar-toggler" type="button" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global" >
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a [routerLink]="['/landing']">
+                <img src="./assets/img/brand/blue.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" >
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
+              <i class="fa fa-facebook-square"></i>
+              <span class="nav-link-inner--text d-lg-none">Facebook</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
+              <i class="fa fa-instagram"></i>
+              <span class="nav-link-inner--text d-lg-none">Instagram</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+              <i class="fa fa-twitter-square"></i>
+              <span class="nav-link-inner--text d-lg-none">Twitter</span>
+            </a>
+          </li>
+          <!---->
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <section class="section section-shaped section-lg">
+      <div class="shape shape-style-1 bg-gradient-default">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 "> <img style="height:100%; width: 100%;" src="./assets/img/brand/donate.jpg"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Make Donnation!</h1>
+                            </div>
+                            <form [formGroup]="donationForm" (ngSubmit)="onSubmit()" *ngIf="!formSubmitted" #form="ngForm" class="user">
+                                <div class="form-group ">
+                               
+                                        <input formControlName="name" type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="Full Name">
+                                  
+
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="email" type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                  <input formControlName="cin"  class="form-control form-control-user" id="exampleInputEmail"
+                                      placeholder="RIB">
+                              </div>
+                              <div class="form-group">
+                                <input formControlName="montant" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="Donation Amount">
+                            </div>
+
+                            <div class="mb-3" style="text-align: center;">
+                              <button type="submit" class="btn btn-primary btn-user btn-block" (click)="onDonate(form)">Donate</button>
+                            </div>
+        
+                                <hr>
+                        
+                            </form>
+                            <hr>
+                            <div *ngIf="formSubmitted" style="text-align: center;">
+                              {{ thankYouMessage }} 
+                              <div class="col-lg-5 "> <img src="./assets/img/brand/donate.jpg"></div>
+
+                          </div>
+                          <div *ngIf="errorMessage" style="text-align: center;">
+                              {{ errorMessage }}
+                          </div>
+                            <div class="text-center">
+                              <a [routerLink]="['/landing']" >Go back to home</a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+  </main>

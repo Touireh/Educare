@@ -1,0 +1,495 @@
+<main>
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" [routerLink]="['/landing']">
+          <img  src="./assets/img/brand/logo2.png">
+          <span  class="display-5  text-white"> EduCare</span>
+        </a>
+        <button class="navbar-toggler" type="button" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global" >
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a [routerLink]="['/landing']">
+                  <img src="./assets/img/brand/blue.png">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" >
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link no-caret" data-toggle="dropdown" role="button">
+                <i class="ni ni-collection d-lg-none"></i>
+                <span class="nav-link-inner--text">Examples</span>
+              </a>
+              <div class="dropdown-menu">
+                <a [routerLink]="['/landing']" class="dropdown-item">Landing</a>
+                <a [routerLink]="['/user-profile']" class="dropdown-item">Profile</a>
+                <a [routerLink]="['/login']" class="dropdown-item">Login</a>
+                <a [routerLink]="['/register']" class="dropdown-item">Register</a>
+                <a [routerLink]="['/add-book']" class="dropdown-item">Users</a>
+                <a [routerLink]="['/add-child']" class="dropdown-item">Students</a>
+                <a [routerLink]="['/add-activite']" class="dropdown-item">Activities</a>
+                <a [routerLink]="['/book-list']" class="dropdown-item">list</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
+                <i class="fa fa-facebook-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Facebook</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
+                <i class="fa fa-instagram"></i>
+                <span class="nav-link-inner--text d-lg-none">Instagram</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+                <i class="fa fa-twitter-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Twitter</span>
+              </a>
+            </li>
+            <!---->
+          
+            <li class="nav-item d-none d-lg-block ml-lg-4">
+              <a (click)="onLogout()"  class="btn btn-neutral btn-icon" href="#" data-toggle="modal" data-target="#logoutModal">
+                Logout
+            </a>
+        
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="position-relative">
+      <!-- shape Hero -->
+      <section class="section section-lg section-shaped pb-250">
+        <div class="shape shape-style-1 bg-gradient-default">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="container py-lg-md d-flex"> 
+          <div class="col px-0">
+            <div class="row">
+              <div class="col-lg-6">
+                <h1 class="display-3  text-white"><p>Bienvenue, Oussama{{ email }}!</p>to
+                  <span>EduCare</span> {{ password }}
+                </h1>
+                <p class="lead  text-white">Our vision is a world in which all people can reach their full potential.</p>
+               
+                    <a [routerLink]="['/donat']" class="btn btn-warning mt-4">Make a Donation</a>
+  
+                  
+                <!--  <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-landing-page" class="btn btn-white btn-icon mb-3 mb-sm-0">
+                    <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
+                    <span class="btn-inner--text">Download Angular</span>
+                  </a>-->
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="separator separator-bottom separator-skew">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </section>
+      <!-- 1st Hero Variation -->
+    </div>
+    <section class="section section-lg pt-lg-0 mt--200">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="row row-grid">
+              <div class="col-lg-4"*ngFor="let activite of Activites; let i = index">
+                <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                      <i class="ni ni-check-bold"></i>
+                    </div>
+                    <h6 class="text-warning text-uppercase">{{activite.name}}</h6>
+                    <p class="description mt-3">{{activite.description}}.</p>
+                    <div class="row">
+                      
+                      
+                      <div  class="col-6">
+                        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+
+                      <i class="fas fa-heart" (click)="incrementLikes()" style="color: red; font-size: 20px;" ></i>
+                      {{likes}}
+                     </div>
+                    <div  class="col-6">
+                      <i class="fas fa-thumbs-down" (click)="incrementDislikes()" style="color: blue; font-size: 20px;"></i>
+                      {{dislikes}}
+                    </div>
+                  
+                  
+                  </div>
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+
+             
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+
+
+  
+    <section style="margin-top: -50px;" class="section bg-secondary">
+      <div class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-md-6">
+            <div class="card bg-default shadow border-0">
+              <img src="./assets/img/theme/img1.webp" class="card-img-top">
+              <blockquote class="card-blockquote">
+                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="svg-bg">
+                  <polygon points="0,52 583,95 0,95" class="fill-default" />
+                  <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
+                </svg>
+                <h4 class="display-3 font-weight-bold text-white">EduCare</h4>
+                <p class="lead text-italic text-white">Managing children with special needs can be a challenge for parents and educators. Parents may have difficulty keeping track of their child's daily activities..</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pl-md-5">
+              <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
+                <i class="ni ni-settings"></i>
+              </div>
+              <h3>About us </h3>
+              <p class="lead">The "EduCare" app aims to address these challenges by providing a platform for parents to track their child's daily activities at the daycare.</p>
+              <p>view the comments and observations of the educators, view the meal menus and daycare schedules.</p>
+              <p>and communicate in real-time with the educators.</p>
+              <a href="javascript:void(0)" class="font-weight-bold text-warning mt-5">Discover us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+   
+    <section style="margin-top: -40px;" class="section pb-0 bg-gradient-warning">
+      <div style="margin-top: -95px;"  class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-lg-6 order-lg-2">
+              <div class="card shadow shadow-lg--hover mt-5">
+                <div class="card-body">
+                  <div class="d-flex px-3">
+                    <div>
+                      <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                        <i class="ni ni-satisfied"></i>
+                      </div>
+                    </div>
+                    <div class="pl-4">
+                      <h5 class="title text-primary">Physical Health Support Services</h5>
+                      <p>Physical therapy, rehabilitation, nursing and support services for specific medical needs are used to help students with specific physical needs maintain good physical health.</p>
+                      <a href="javascript:void(0)" class="text-primary">Learn more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+          
+          <div class="col-lg-6 order-lg-1">
+            <div class="card shadow shadow-lg--hover mt-5" >
+              <div class="card-body">
+                <div class="d-flex px-3">
+                  <div>
+                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i class="ni ni-satisfied"></i>
+                    </div>
+                  </div>
+                  <div class="pl-4">
+                    <h5 class="title text-primary">Learning Support Services</h5>
+                    <p>Reading Assistance, Tutoring, Remediation, Basic Skills Development and Math Support services are used to help students understand the subjects being taught. </p>
+                    <a href="javascript:void(0)" class="text-primary">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card shadow shadow-lg--hover mt-5">
+              <div class="card-body">
+                <div class="d-flex px-3">
+                  <div>
+                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i class="ni ni-satisfied"></i>
+                    </div>
+                  </div>
+                  <div class="pl-4">
+                    <h5 class="title text-primary">Mental health support services</h5>
+                    <p>Counselling, therapy, group support and treatment services for mental health issues are used to help students manage their emotions and maintain good mental health.</p>
+                    <a href="javascript:void(0)" class="text-primary">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+   
+    <section class="section section-lg">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-lg">
+          <div class="col-lg-8">
+            <h2 class="display-3">The amazing Activities </h2>
+            <p class="lead text-muted">There are many amazing activities that one can engage in, depending on their interests and preferences. Some popular activities include.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="./assets/img/theme/img5.webp" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Learning and Education</span>
+                  <small class="h6 text-muted">taking courses, attending workshops...</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="javascript:void(0)" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="./assets/img/theme/img2.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">RArt and Culture</span>
+                  <small class="h6 text-muted">visiting museums...</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="javascript:void(0)" class="btn btn-primary btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-primary btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-primary btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="./assets/img/theme/img3.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Food and Drink</span>
+                  <small class="h6 text-muted">Trying new restaurants, cooking...</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="javascript:void(0)" class="btn btn-info btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-info btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-info btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="./assets/img/theme/img4.webp" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Travel and Adventure </span>
+                  <small class="h6 text-muted">visiting new places</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="javascript:void(0)" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-lg pt-0">
+      <div class="container">
+        <div class="card bg-gradient-warning shadow-lg border-0">
+          <div class="p-5">
+            <h3 class="text-white" style="text-align: center;"> Top 5 Donations </h3>
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                  <table class="table-responsive">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col" style="padding-left: 100px;">Montant en DH</th>
+                            <th scope="col" style="padding-left: 100px;text-align: center;">Made on</th>
+                        </tr>
+                    </thead>
+                    <hr>
+                    <tbody>
+                        <tr *ngFor="let donation of Donations.slice(0, 5); let i = index">
+                            <td style="color: black;">{{donation.name}}</td>
+                            <td style="color: black;padding-left: 100px;">{{donation.montant}}</td>
+                            <td style="color: black;padding-left: 100px;text-align: center;">{{donation.created_at | date: 'dd/MM/yyyy HH:mm'}}</td>
+                        </tr> 
+                    </tbody>
+                  </table>
+              </div>
+              <div class="col-lg-3 ml-lg-auto">
+                <a [routerLink]="['/donat']" class="btn btn-default mt-4">Make a Donation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section  style ="margin-top: -90px;" class="section section-lg bg-gradient-default">
+      <div style="margin-top:-150px;" class="container pt-lg">
+        <div class="row text-center justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="display-3 text-white">Build something</h2>
+            <p class="lead text-white">Provide ideas to improve our service and to enhance the development of these children.</p>
+          </div>
+        </div>
+        <div class="row row-grid mt-5">
+          <div class="col-lg-4">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-settings text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Want to work with us ?</h5>
+            <p class="text-white mt-3">our project is very important to us.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-ruler-pencil text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3">Do you want to participate in volunteering ?</h5>
+            <p class="text-white mt-3">Volunteering is a great way to give back to the community and make a positive impact.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+              <i class="ni ni-atom text-primary"></i>
+            </div>
+            <h5 class="text-white mt-3"> You didn't understand something ?</h5>
+            <p class="text-white mt-3">Don't hesitate to ask questions, we are here to find solutions.</p>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    <section class="section section-lg pt-lg-0 section-contact-us">
+      <div style="margin-top: 190px; margin-bottom: -100px;"  class="container">
+        <div class="row justify-content-center mt--300">
+          <div class="col-lg-8">
+            <div class="card bg-gradient-secondary shadow">
+              <div class="card-body p-lg-5">
+                <h4 class="mb-1">Send your proposal</h4>
+                <p class="mt-0">Your proposal is very important to us.</p>
+                <div class="form-group mt-5" >
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your name" type="text" >
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Email address" type="email" >
+                  </div>
+                </div>
+                <div class="form-group mb-4">
+                  <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default btn-round btn-block btn-lg">Send Message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="sticky-footer bg-white" style="margin-top:30px ;" >
+      <div class="container my-auto">
+
+      <!--<p class="text-center">"Transformer les défis en opportunités pour améliorer la vie des enfants ayant des besoins spécifiques - Tel est le but de notre application."</p>-->  
+        <p class="text-center">Made with <i class="fas fa-heart text-danger"></i> by</p>
+        <p class="text-center font-weight-bold">Sakini Oussama,Touireh Hiba </p>
+        <div class="copyright text-center my-auto">
+          <span>Copyright &copy; Your Website 2023</span>
+      </div>
+      </div>
+   
+    </footer>
+     
+  </main>
+  

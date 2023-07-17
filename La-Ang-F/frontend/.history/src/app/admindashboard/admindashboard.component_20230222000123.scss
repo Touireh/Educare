@@ -1,0 +1,32 @@
+.study-calendar {
+    max-width: 800px;
+    margin: 0 auto;
+  
+    .fc-header-toolbar {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+  
+      .fc-toolbar-chunk {
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+    .fc {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .fc-event {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #fff;
+    }
+  
+    .fc-event:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+  }
+  

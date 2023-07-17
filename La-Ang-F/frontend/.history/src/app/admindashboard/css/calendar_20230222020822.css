@@ -1,0 +1,18 @@
+.my-calendar {
+  margin: auto;
+  max-width: 800px;
+}
+
+.fc-toolbar {
+  color: white;
+  border: none;
+}
+
+.fc-day-header {
+  color: white;
+}
+div.my-calendar .fc-event-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

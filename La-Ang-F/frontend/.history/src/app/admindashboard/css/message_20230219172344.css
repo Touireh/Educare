@@ -1,0 +1,61 @@
+.form-message {
+    margin-left: 2%;
+    margin-top: 2%;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .form-message .dropdown-header {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #4e73df;
+    letter-spacing: 1px;
+  }
+  
+  .form-message .dropdown-item {
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-message .dropdown-item:hover {
+    background-color: #f8f9fc;
+  }
+  
+  .form-message .dropdown-list-image img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .form-message .dropdown-list-image .status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  .form-message .dropdown-list-image .status-indicator.online {
+    background-color: #1cc88a;
+  }
+  
+  .form-message .dropdown-list-image .status-indicator.offline {
+    background-color: #e74a3b;
+  }
+  
+  .form-message .font-weight-bold {
+    font-weight: 600;
+  }
+  
+  .form-message .text-gray-500 {
+    color: #858796;
+    font-size: 12px;
+  }
+  
+  .form-message .text-truncate {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  

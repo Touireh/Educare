@@ -1,0 +1,47 @@
+.my-calendar {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fc-header-toolbar {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.fc-day-header {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.fc-center h2 {
+  font-size: 24px;
+  margin: 10px;
+  color: #0077b6;
+}
+
+.fc-day {
+  border: none;
+}
+
+.fc-day-top {
+  background-color: #f2f2f2;
+  height: 30px;
+}
+
+.fc-day-number {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.fc-day-grid-event {
+  background-color: #eee;
+  border: none;
+}
+
+.fc-today {
+  background-color: #0077b6;
+  color: #fff;
+}

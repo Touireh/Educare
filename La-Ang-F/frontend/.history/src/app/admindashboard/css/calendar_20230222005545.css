@@ -1,0 +1,23 @@
+.my-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.fc-toolbar {
+  background-color: #3366cc;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.fc-day-header:first-of-type {
+  background-color: #3366cc;
+  color: white;
+}
+
+.fc-daygrid {
+  height: 500px;
+}

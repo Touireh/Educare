@@ -1,0 +1,185 @@
+  <section class="section-profile-cover section-shaped my-0">
+    <!-- Circles background -->
+    <div class="shape shape-style-1 shape-primary alpha-4">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <section class="section section-lg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-rYsRaX9RcXlQ2VaWkqpP7SzTfNpRR3SAw0YfO+V7dtKbXUuB7Udb4W4Hk6U2B6dZ" crossorigin="anonymous">
+    <style>.my-custom-card-class {
+      width: 120%;
+      max-width: 500px;
+    }
+    
+    .card-profile-image img {
+      max-width: 150px;
+      max-height: 150px;
+    }</style>
+    <div class="container">
+      <div class="row justify-content-center  " >
+        <div class="col-lg-4" >
+        
+          <div class="card card-profile shadow h-100 my-custom-card-class ">
+            <div class="card-profile-image">
+              <img src="./assets/img/theme/team-4-800x800.jpg" class="img-fluid rounded-circle mx-auto d-block mt-4" alt="parent photo">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-0"><span>Oussama</span></h5><br>
+              <div class="card-subtitle text-muted mb-3">Email: <span>{{email}}</span></div>
+              <div class="card-subtitle text-muted mb-3">Password: <span>{{password}}</span></div>
+              <div class="row justify-content-center">
+               
+                <div class="col-lg-6">
+                  <button class="btn btn-default btn-block mb-3">Message</button>
+                </div>
+              </div>
+              <div class="card-text mb-4">
+                <i class="fas fa-map-marker-alt"></i>     parent.location<br>
+                <i class="ni ni-briefcase-24 mr-2"></i>   parent.job<br>
+                <i class="ni ni-hat-3 mr-2"></i>          parent.education
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4"></div>
+       
+        <div class="col-lg-4">
+          <div class="card card-profile shadow  h-100 my-custom-card-class">
+            <div class="card-profile-image">
+              <img src="./assets/img/theme/team-4-800x800.jpg" class="img-fluid rounded-circle mx-auto d-block mt-4" alt="child photo">
+            </div>
+            <!-- <div class="card-body text-center">
+              <h5 class="card-title mb-0">child.name</h5>
+              <div class="card-subtitle text-muted mb-3">child.age</div>
+              <p class="card-text">child.bio</p>
+              <div class="card-text mb-4">
+                <i class="fas fa-map-marker-alt"></i>    child.location<br>
+                <i  class="ni ni-hat-3 mr-2"></i>   child.school
+              </div>
+              <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <button class="btn btn-default btn-block mb-3">Show more</button>
+              </div>
+              </div>
+            </div>-->
+            <div *ngIf="enfants">
+              <h2>Enfants associés</h2>
+              <ul>
+                <li *ngFor="let enfant of enfants">
+                  {{ enfant.fname }} {{ enfant.lname }}, {{ enfant.age }} ans, malade de {{ enfant.maladie }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="section section-lg pt-0">
+    <div class="container">
+      <div class="card bg-gradient-warning shadow-lg border-0">
+        <div class="p-5">
+          <h3 class="text-white" style="text-align: center;"> Top 5 Donations </h3>
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+                <table class="table-responsive">
+                  <thead>
+                      <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col" style="padding-left: 100px;">Montant en DH</th>
+                          <th scope="col" style="padding-left: 100px;text-align: center;">Made on</th>
+                      </tr>
+                  </thead>
+                  <hr>
+                  <tbody>
+                      <tr *ngFor="let donation of Donations.slice(0, 5); let i = index">
+                          <td style="color: black;">{{donation.name}}</td>
+                          <td style="color: black;padding-left: 100px;">{{donation.montant}}</td>
+                          <td style="color: black;padding-left: 100px;text-align: center;">{{donation.created_at | date: 'dd/MM/yyyy HH:mm'}}</td>
+                      </tr> 
+                  </tbody>
+                </table>
+            </div>
+            <div class="col-lg-3 ml-lg-auto">
+              <a [routerLink]="['/donat']" class="btn btn-default mt-4">Make a Donation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section  style ="margin-top: -90px;" class="section section-lg bg-gradient-default">
+    <div style="margin-top:-150px;" class="container pt-lg">
+      <div class="row text-center justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="display-3 text-white">Build something</h2>
+          <p class="lead text-white">Provide ideas to improve our service and to enhance the development of these children.</p>
+        </div>
+      </div>
+    
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <section class="section section-lg pt-lg-0 section-contact-us">
+    <div style="margin-top: 190px; margin-bottom: -100px;"  class="container">
+      <div class="row justify-content-center mt--300">
+        <div class="col-lg-8">
+          <div class="card bg-gradient-secondary shadow">
+            <div class="card-body p-lg-5">
+              <h4 class="mb-1">Send your proposal</h4>
+              <p class="mt-0">Your proposal is very important to us.</p>
+              <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mt-5">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your name" type="text" formControlName="name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Email address" type="email" formControlName="email">
+                  </div>
+                </div>
+                <div class="form-group mb-4">
+                  <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..." formControlName="message"></textarea>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-default btn-round btn-block btn-lg">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

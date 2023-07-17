@@ -1,0 +1,14 @@
+.my-calendar {
+  margin: auto;
+  max-width: 800px;
+}
+
+.fc-toolbar {
+  background-color: #1c2331;
+  color: white;
+  border: none;
+}
+
+.fc-day-header {
+  color: white;
+}

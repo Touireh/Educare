@@ -1,0 +1,17 @@
+.img1{
+max-width: 100%;
+  height: auto;
+  width: 25%;
+  margin-left:60% ; 
+  margin-top:1.5%;
+}
+@media screen and (max-width: 768px) {
+    .img1 {
+      margin-left: 60%;
+      margin-top: 2%;
+      width: 38%;
+    }
+  }
+  .card shadow {
+    width: 100%;
+  }

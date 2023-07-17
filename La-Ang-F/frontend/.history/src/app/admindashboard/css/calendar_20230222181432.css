@@ -1,0 +1,7 @@
+.my-calendar {
+  margin: auto;
+  max-width: 90%;
+}
+.my-calendar .fc-day-header.fc-widget-header {
+  background-color: blue;
+}

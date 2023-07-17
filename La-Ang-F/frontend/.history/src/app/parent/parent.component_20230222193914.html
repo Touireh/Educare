@@ -1,0 +1,317 @@
+<main>
+  <head>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6dZ9X/mqi+1kA7+bGoOxnO+L0ax2oguYmAbFbRv1B+HdI7j3qM3kmJ7VZ+LQmrK9VJfKOQr/7rKwTl+maI6UeA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" [routerLink]="['/landing']">
+          <img  src="./assets/img/brand/logo2.png">
+          <span  class="display-5  text-white"> EduCare</span>
+        </a>
+        <button class="navbar-toggler" type="button" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global" >
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a [routerLink]="['/landing']">
+                  <img src="./assets/img/brand/blue.png">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" >
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
+                <i class="fa fa-facebook-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Facebook</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
+                <i class="fa fa-instagram"></i>
+                <span class="nav-link-inner--text d-lg-none">Instagram</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+                <i class="fa fa-twitter-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Twitter</span>
+              </a>
+            </li>
+            <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <li class="nav-item dropdown">
+              <a (click)="onLogout()" class="nav-link no-caret" data-toggle="dropdown" role="button">
+                <i class="fas fa-user-circle"></i> <span class="nav-link-inner--text">Profile</span>
+              </a>
+              <div class="dropdown-menu">
+                <a [routerLink]="['/landing']" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>Logout</a>
+              </div>
+            </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="position-relative">
+      <!-- shape Hero -->
+      <section class="section section-lg section-shaped pb-250">
+        <div class="shape shape-style-1 bg-gradient-default">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="container py-lg-md d-flex"> 
+          <div class="col px-0">
+            <div class="row">
+              <div class="col-lg-6">
+                <h3 class="display-3  text-white">
+                  Bienvenue <b>Oussama</b> to<h2 style="color: orangered;">EduCare</h2>
+                </h3>
+                <p class="lead  text-white">Our vision is a world in which all people can reach their full potential.</p>
+                    <a [routerLink]="['/donat']" class="btn btn-warning mt-4">Make a Donation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="separator separator-bottom separator-skew">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </section>
+      <!-- 1st Hero Variation -->
+    </div>
+    <section class="section section-lg pt-lg-0 mt--200">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="row row-grid">
+              <div class="col-lg-4"*ngFor="let activite of Activites; let i = index">
+                <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                      <i class="ni ni-check-bold"></i>
+                    </div>
+                    <h6 class="text-warning text-uppercase">{{activite.name}}</h6>
+                    <p class="description mt-3">{{activite.description}}.</p>
+                    <div class="row">
+                      
+                      
+                      <div  class="col-6">
+                        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+
+                      <i class="fas fa-heart" (click)="incrementLikes()" style="color: red; font-size: 20px;" ></i>
+                      {{likes}}
+                     </div>
+                    <div  class="col-6">
+                      <i class="fas fa-thumbs-down" (click)="incrementDislikes()" style="color: blue; font-size: 20px;"></i>
+                      {{dislikes}}
+                    </div>  
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+
+
+  
+    <section  class="section bg-secondary">
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <img src="../../assets/img/apple-icon.png">
+      </div>
+
+      <div class="col-lg-6 order-lg-1">
+        <!-- Begin Page Calendar -->
+        <div  class="my-calendar">
+          <full-calendar [options]="calendarOptions"></full-calendar>
+        </div>
+        <!-- End Page Calendar -->
+      </div>
+
+
+    </section>
+   
+  <section class="section section-lg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-rYsRaX9RcXlQ2VaWkqpP7SzTfNpRR3SAw0YfO+V7dtKbXUuB7Udb4W4Hk6U2B6dZ" crossorigin="anonymous">
+    
+    <div class="container">
+      <h2 class="display-3 text-center">Your Profile</h2>
+      <div class="row justify-content-center" id="profil">
+        <div class="col-lg-4">
+          <div class="card card-profile shadow h-100">
+            <div class="card-profile-image">
+              <img src="../../assets/img/theme/homme.jfif" class="img-fluid rounded-circle mx-auto d-block mt-4 img-thumbnail w-75" alt="parent photo">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-0"><i class="ni ni-single-02 mr-2"></i><span>Oussama</span></h5>
+              <div class="card-text mb-4">Email : <span>{{email}}</span><br>
+                <i class="ni ni-briefcase-24 mr-2"></i>Professeur
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <button class="btn btn-default btn-block mb-3">Show More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="card card-profile shadow h-100">
+            <div class="card-profile-image">
+              <img src="../../assets/img/theme/enfant.jfif" class="img-fluid rounded-circle mx-auto d-block mt-4 img-thumbnail w-75" alt="child photo">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title mb-0"><i class="ni ni-single-02 mr-2"></i>Ahmed Nassime</h5>
+              <div class="card-text mb-4">
+                10<br>
+                <i class="ni ni-calendar-grid-58 mr-2"></i> 2022/2023
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <button class="btn btn-default btn-block mb-3">Show More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    
+  </section>
+  
+
+
+
+
+
+
+
+  <section class="section section-lg pt-0">
+    <div class="container">
+      <div class="card bg-gradient-warning shadow-lg border-0">
+        <div class="p-5">
+          <h3 class="text-white" style="text-align: center;"> Top 5 Donations </h3>
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+                <table class="table-responsive">
+                  <thead>
+                      <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col" style="padding-left: 100px;">Montant en DH</th>
+                          <th scope="col" style="padding-left: 100px;text-align: center;">Made on</th>
+                      </tr>
+                  </thead>
+                  <hr>
+                  <tbody>
+                      <tr *ngFor="let donation of Donations.slice(0, 5); let i = index">
+                          <td style="color: black;">{{donation.name}}</td>
+                          <td style="color: black;padding-left: 100px;">{{donation.montant}}</td>
+                          <td style="color: black;padding-left: 100px;text-align: center;">{{donation.created_at | date: 'dd/MM/yyyy HH:mm'}}</td>
+                      </tr> 
+                  </tbody>
+                </table>
+            </div>
+            <div class="col-lg-3 ml-lg-auto">
+              <a [routerLink]="['/donat']" class="btn btn-default mt-4">Make a Donation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section  style ="margin-top: -90px;" class="section section-lg bg-gradient-default">
+    <div style="margin-top:-150px;" class="container pt-lg">
+      <div class="row text-center justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="display-3 text-white">Build something</h2>
+          <p class="lead text-white">Provide ideas to improve our service and to enhance the development of these children.</p>
+        </div>
+      </div>
+    
+    </div>
+    <!-- SVG separator -->
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </section>
+  <section class="section section-lg pt-lg-0 section-contact-us">
+    <div style="margin-top: 190px; margin-bottom: -100px;"  class="container">
+      <div class="row justify-content-center mt--300">
+        <div class="col-lg-8">
+          <div class="card bg-gradient-secondary shadow">
+            <div class="card-body p-lg-5">
+              <h4 class="mb-1">Send your proposal</h4>
+              <p class="mt-0">Your proposal is very important to us.</p>
+              <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mt-5">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your name" type="text" formControlName="name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Email address" type="email" formControlName="email" >
+                  </div>
+                </div>
+                <div class="form-group mb-4">
+                  <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..." formControlName="message"></textarea>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-default btn-round btn-block btn-lg">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="sticky-footer bg-white" style="margin-top:30px ;" >
+      <div class="container my-auto">
+
+      <!--<p class="text-center">"Transformer les défis en opportunités pour améliorer la vie des enfants ayant des besoins spécifiques - Tel est le but de notre application."</p>-->  
+      <p class="text-center">Made with <i class="fas fa-heart text-danger"></i> by<b> Sakini Oussama,Touireh Hiba</b> </p>
+      <div class="copyright text-center my-auto">
+          <span>Copyright &copy; Your Website 2023</span>
+      </div>
+      </div>
+   
+    </footer>
+     
+  </main>
+  

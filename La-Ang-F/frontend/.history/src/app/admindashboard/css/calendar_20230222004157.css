@@ -1,0 +1,10 @@
+.my-calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-calendar .fc th {
+  background-color: blue;
+  color: white;
+}

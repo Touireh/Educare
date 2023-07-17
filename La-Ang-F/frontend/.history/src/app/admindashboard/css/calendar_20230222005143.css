@@ -1,0 +1,11 @@
+.my-calendar {
+  margin: 0 auto; /* centre le calendrier horizontalement */
+  max-width: 600px; /* limite la largeur du calendrier */
+  height: 500px; /* hauteur du calendrier */
+}
+
+/* style pour la première ligne en bleu */
+.fc-day-header:first-of-type {
+  background-color: blue;
+  color: white;
+}

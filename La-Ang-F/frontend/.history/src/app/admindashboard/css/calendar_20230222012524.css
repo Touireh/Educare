@@ -1,0 +1,24 @@
+.my-calendar {
+  margin: 0 auto; /* Centre la div horizontalement */
+  width: 80%; /* Définit la largeur de la div */
+}
+
+.fc-day-header {
+  background-color: blue; /* Couleur de fond pour la première ligne */
+  color: white; /* Couleur de texte pour la première ligne */
+}
+
+.fc-day-header.fc-widget-header {
+  font-size: 14px; /* Définit la taille de police pour les abréviations de jours */
+  font-weight: bold; /* Définit la graisse de police pour les abréviations de jours */
+}
+
+.fc-toolbar.fc-header-toolbar {
+  display: flex; /* Utilise un affichage en ligne pour les boutons du calendrier */
+  justify-content: center; /* Centre les boutons horizontalement */
+  margin-bottom: 10px; /* Ajoute un peu d'espace sous les boutons */
+}
+
+.fc-toolbar.fc-header-toolbar button {
+  margin: 0 5px; /* Ajoute de l'espace entre les boutons */
+}

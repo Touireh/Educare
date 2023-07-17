@@ -1,0 +1,9 @@
+.my-calendar {
+  margin: auto;
+  max-width: 600px;
+}
+.my-calendar .fc-event-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

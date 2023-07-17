@@ -1,0 +1,11 @@
+/* Centrer le calendrier */
+.my-calendar {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Ajouter une couleur de fond à la première ligne */
+.my-calendar .fc-day-header:first-of-type {
+  background-color: blue;
+  color: white;
+}

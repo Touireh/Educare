@@ -1,0 +1,9 @@
+.my-calendar {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.my-calendar .fc-scrollgrid-container {
+  min-height: calc(100% - 45px);
+}
